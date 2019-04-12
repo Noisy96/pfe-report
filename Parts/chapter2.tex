@@ -1,0 +1,58 @@
+
+
+\chapter{Les technologies utilisées}
+
+\section{Un bref historique du développement d'applications mobiles}
+Le développement d'applications mobiles est l'acte ou le processus par lequel une application est développée pour les appareils mobiles. Ces applications peuvent être préinstallées sur les téléphones au cours de la fabrication ou accessibles via un navigateur Web \cite{noauthor_mobile_2019}. Toutefois, au cours de la dernière décennie \cite{leler_whats_2017}, des développeurs tiers ont été capables de créer des applications mobiles. Cependant, en raison de la concurrence intense dans les logiciels mobiles et des modifications apportées à chacune des plateformes, ces développeurs doivent prendre en compte un large éventail de tailles d'écran, de spécifications matérielles et de configurations.\\
+\tab Le développement d'applications mobiles est un domaine d'activité relativement récent. il n’est donc pas surprenant que les outils évoluent encore.
+
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=9cm]{Images/chapter2/mobile_dev_history_diagram.png}
+		\caption{{\footnotesize Histoire du développement d'applications mobiles}}\cite{panhale_beginning_2016}
+	\end{center}
+\end{figure}
+
+\subsection{Les kits de développement de plate-forme (Platform SDKs)}
+Le SDK Apple iOS est sorti en 2008 et le SDK Google Android en 2009. Ces deux SDK étaient basés sur des langages différents: Objective-C et Java, respectivement.
+Votre application communique avec la plateforme pour créer des widgets ou accéder à des services tels que la caméra. Les widgets sont rendus dans un canevas d’écran et les événements sont renvoyés aux widgets. C'est une architecture simple, mais vous devez créer des applications séparées pour chaque plate-forme car les widgets sont différents, sans parler des langues natives\cite{leler_whats_2017}.
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=10cm]{Images/chapter2/platform_sdk.png}
+		\caption{{\footnotesize Architecture du développement mobile a l'aide des SDK\cite{leler_whats_2017}}}
+	\end{center}
+\end{figure}
+
+\subsection{Vues Web (WebViews)}
+Les premiers frameworks multi-plateformes étaient basés sur JavaScript et WebViews. Les exemples incluent une famille de frameworks liés: PhoneGap, Apache Cordova, Ionic, etc. Avant de publier leur SDK iOS, Apple avait encouragé les développeurs tiers à créer des applications Web pour iPhone. Il était donc évident de créer des applications multiplates-formes à l'aide de technologies Web.
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=10cm]{Images/chapter2/webview.png}
+		\caption{{\footnotesize Architecture du développement mobile a l'aide des WebViews\cite{leler_whats_2017}}}
+	\end{center}
+\end{figure}
+
+Votre application crée du HTML et l'affiche dans une vue Web sur la plateforme. Notez qu'il est difficile pour des langages tels que JavaScript de parler directement au code natif (comme les services), de sorte qu'ils passent par un «pont» qui fait que le contexte bascule entre le domaine JavaScript et le domaine natif. Comme les services de plate-forme ne sont généralement pas appelés très souvent, cela n’a pas causé trop de problèmes de performances\cite{leler_whats_2017}.
+
+\subsection{Vues réactives (Reactive Views)}
+Les infrastructures Web réactives telles que ReactJS (et d'autres) sont devenues populaires, principalement parce qu'elles simplifient la création de vues Web grâce à l'utilisation de modèles de programmation empruntés à la programmation réactive. En 2015, React Native a été créé pour apporter les nombreux avantages des vues réactives aux applications mobiles.\\
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=10cm]{Images/chapter2/reactive_views.png}
+		\caption{{\footnotesize Architecture du développement mobile a l'aide des Reactive Views\cite{leler_whats_2017}}}
+	\end{center}
+\end{figure}
+
+React Native est très populaire (et mérite de l'être), mais comme le domaine JavaScript accède aux widgets de la plate-forme dans le domaine natif, il doit également passer par le pont. Les widgets sont généralement utilisés assez fréquemment (jusqu'à 60 fois par seconde lors d'animations, de transitions ou lorsque l'utilisateur balaie quelque chose sur l'écran avec son doigt), ce qui peut entraîner des problèmes de performances.
+
+\section{Flutter}
+
+\section{Firebase}
+
+\section{Google Maps}
+
+\section{Google Books}
