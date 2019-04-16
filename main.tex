@@ -4,7 +4,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[french]{babel}
 \usepackage{lmodern} % For changing the font
-\usepackage{makeidx}
+
 \usepackage{graphicx} % For including images
 \usepackage{wrapfig} % For using images wrapped inside some text
 \usepackage{hyperref}
@@ -18,13 +18,19 @@
 \rhead{\thepage}
 \lhead{\leftmark}
 
+\usepackage{makeidx}
 \makeindex
+\usepackage[sort=use]{glossaries}
+
+\input{Parts/glossary.tex}
+\input{Parts/acronyms.tex}
+
 \begin{document}
 \tableofcontents
 \listoffigures
 %\listoftables
 \printindex
-
+\printglossary[type=main, title={Glossaire et acronymes}]
 
 
 \input{Parts/chapter1.tex}
