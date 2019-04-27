@@ -3,8 +3,9 @@
 \chapter{Les technologies utilisées}
 
 \section{Un bref historique du développement d'applications mobiles}
-Le développement d'applications mobiles est l'acte ou le processus par lequel une application est développée pour les appareils mobiles. Ces applications peuvent être préinstallées sur les téléphones au cours de la fabrication ou accessibles via un navigateur Web \cite{noauthor_mobile_2019}. Toutefois, au cours de la dernière décennie \cite{leler_whats_2017}, des développeurs tiers ont été capables de créer des applications mobiles. Cependant, en raison de la concurrence intense dans les logiciels mobiles et des modifications apportées à chacune des plateformes, ces développeurs doivent prendre en compte un large éventail de tailles d'écran, de spécifications matérielles et de configurations.\\
-\tab Le développement d'applications mobiles est un domaine d'activité relativement récent. il n’est donc pas surprenant que les outils évoluent encore.
+Le développement d'applications mobiles est l'acte ou le processus par lequel une application est développée pour les appareils mobiles. Ces applications peuvent être préinstallées sur les téléphones au cours de la fabrication ou accessibles via un navigateur Web \cite{noauthor_mobile_2019}. Toutefois, au cours de la dernière décennie \cite{leler_whats_2017}, des développeurs tiers ont été capables de créer des applications mobiles. Cependant, en raison de la concurrence intense dans les logiciels mobiles et des modifications apportées à chacune des plateformes, ces développeurs doivent prendre en compte un large éventail de tailles d'écran, de spécifications matérielles et de configurations.
+
+Le développement d'applications mobiles est un domaine d'activité relativement récent. il n’est donc pas surprenant que les outils évoluent encore.
 \newpage
 
 \subsection{Les kits de développement de plate-forme (Platform SDKs)}
@@ -56,8 +57,9 @@ React Native est très populaire (et mérite de l'être), mais comme le domaine 
 	\caption{{\footnotesize Logo de Flutter}}
 \end{wrapfigure}
 
-Flutter est un SDK pour applications mobiles permettant de créer des applications hautes performances et haute fidélité pour iOS et Android à partir d'une seule base de code\cite{noauthor_technical_nodate}.\medskip \\
-\tab L'objectif est de permettre aux développeurs de proposer des applications hautes performances qui se sentent naturelles sur différentes plates-formes. Nous adoptons des différences dans les comportements de défilement, la typographie, les icônes, etc.\bigskip
+Flutter est un SDK pour applications mobiles permettant de créer des applications hautes performances et haute fidélité pour iOS et Android à partir d'une seule base de code\cite{noauthor_technical_nodate}.\medskip
+
+L'objectif est de permettre aux développeurs de proposer des applications hautes performances qui se sentent naturelles sur différentes plates-formes. Nous adoptons des différences dans les comportements de défilement, la typographie, les icônes, etc.\bigskip
 
 \begin{figure}[h]
 	\begin{center}
@@ -66,8 +68,9 @@ Flutter est un SDK pour applications mobiles permettant de créer des applicatio
 	\end{center}
 \end{figure}
 
-\tab Comme React Native, Flutter fournit également des vues de style réactif. Flutter adopte une approche différente pour éviter les problèmes de performances causés par la nécessité d'un pont JavaScript en utilisant un langage de programmation compilé, à savoir Dart. Dart est compilé «à l'avance» \acrshort{AOT} en code natif pour plusieurs plates-formes. Cela permet à Flutter de communiquer avec la plate-forme sans passer par un pont JavaScript qui effectue un changement de contexte. La compilation en code natif améliore également les temps de démarrage des applications.\medskip \\
-\tab Flutter a une nouvelle architecture qui inclut des widgets qui ont l’air agréable, qui sont rapides, personnalisables et extensibles. il n'utilise pas les widgets de plate-forme (ou DOM WebViews), il fournit ses propres widgets.
+Comme React Native, Flutter fournit également des vues de style réactif. Flutter adopte une approche différente pour éviter les problèmes de performances causés par la nécessité d'un pont JavaScript en utilisant un langage de programmation compilé, à savoir Dart. Dart est compilé «à l'avance» \acrshort{AOT} en code natif pour plusieurs plates-formes. Cela permet à Flutter de communiquer avec la plate-forme sans passer par un pont JavaScript qui effectue un changement de contexte. La compilation en code natif améliore également les temps de démarrage des applications.\medskip
+
+Flutter a une nouvelle architecture qui inclut des widgets qui ont l’air agréable, qui sont rapides, personnalisables et extensibles. il n'utilise pas les widgets de plate-forme (ou DOM WebViews), il fournit ses propres widgets.
 
 \begin{figure}[h]
 	\begin{center}
@@ -76,15 +79,131 @@ Flutter est un SDK pour applications mobiles permettant de créer des applicatio
 	\end{center}
 \end{figure}
 
-\tab Flutter soulève les widgets et le moteur de rendu de la plateforme dans l'application, ce qui leur permet d'être personnalisables et extensibles. Tout ce que Flutter a besoin de la plate-forme est un canevas dans lequel les widgets doivent être rendus afin qu’ils puissent apparaître sur l’écran du périphérique, ainsi que l’accès aux événements (touches, minuteries, etc.) et aux services (localisation, caméra, etc.).\medskip \\
-\tab Il existe toujours une interface entre le programme Dart (en vert) et le code de la plate-forme native (en bleu, pour iOS ou Android) qui effectue l’encodage et le décodage des données, mais cela peut être beaucoup plus rapide qu’un pont JavaScript.
+Flutter soulève les widgets et le moteur de rendu de la plateforme dans l'application, ce qui leur permet d'être personnalisables et extensibles. Tout ce que Flutter a besoin de la plate-forme est un canevas dans lequel les widgets doivent être rendus afin qu’ils puissent apparaître sur l’écran du périphérique, ainsi que l’accès aux événements (touches, minuteries, etc.) et aux services (localisation, caméra, etc.).\medskip
 
-\subsection{Pourquoi utiliser Flutter?}
-
-
+Il existe toujours une interface entre le programme Dart (en vert) et le code de la plate-forme native (en bleu, pour iOS ou Android) qui effectue l’encodage et le décodage des données, mais cela peut être beaucoup plus rapide qu’un pont JavaScript.
 
 \subsection{Principes de base}
-\subsubsection{Tout est un Widget}
+Flutter comprend un \gls{framework} de style réact moderne, un moteur de rendu 2D, des widgets prêts à l'emploi et des outils de développement. Ces composants fonctionnent ensemble pour vous aider à concevoir, créer, tester et déboguer des applications. Tout est organisé autour de quelques principes fondamentaux.
+\subsubsection{{\large 1 - Tout est un widget}}
+Les widgets sont les éléments de base de l’interface utilisateur d’une application Flutter. Chaque widget est une déclaration immuable d'une partie de l'interface utilisateur. Contrairement aux autres frameworks qui séparent les vues, les contrôleurs de vue, les présentations et d'autres propriétés, Flutter possède un modèle objet cohérent et unifié: le widget.
+Un widget peut définir:
+
+\begin{list}{•}{}
+	\item un élément structurel (comme un bouton ou un menu).
+	\item un élément stylistique (comme une police ou un jeu de couleurs).
+	\item un aspect de la mise en page (comme le rembourrage).
+	\item etc…
+\end{list}
+
+Les widgets forment une hiérarchie basée sur la composition. Chaque widget niche à l'intérieur et hérite des propriétés de son parent. Il n'y a pas d'objet «application» séparé. Au lieu de cela, le widget racine joue ce rôle.
+Vous pouvez répondre à des événements, comme une interaction utilisateur, en indiquant au cadre de remplacer un widget de la hiérarchie par un autre. La structure compare ensuite les nouveaux et les anciens widgets et met efficacement à jour l'interface utilisateur.\bigskip
+
+\longtab \textbf{Composition> héritage\medskip}
+
+Les widgets sont souvent eux-mêmes composés de nombreux petits widgets à usage unique qui se combinent pour produire des effets puissants. Par exemple, Container, un widget couramment utilisé, est composé de plusieurs widgets responsables de la mise en page, de la peinture, du positionnement et du dimensionnement. Plus précisément, Container est composé des widgets LimitedBox, ConstrainedBox, Align, Padding, DecoratedBox et Transform. Plutôt que de sous-classer Container pour produire un effet personnalisé, vous pouvez composer ces widgets simples, ainsi que d'autres, de manière innovante.\medskip
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=13cm]{Images/chapter2/hierarchy_widgets.png}
+		\caption{{\footnotesize Exemple d'une hierarchy des widgets\cite{noauthor_technical_nodate}}}
+	\end{center}
+\end{figure}
+
+La hiérarchie des classes est peu profonde et large afin de maximiser le nombre possible de combinaisons.\medskip
+
+Vous pouvez également contrôler la mise en page d'un widget en le composant avec d'autres widgets. Par exemple, pour centrer un widget, vous l'enroulez dans un widget Centre. Il existe des widgets pour le remplissage, l'alignement, les lignes, les colonnes et les grilles. Ces widgets de présentation ne possèdent pas de représentation visuelle. Au lieu de cela, leur seul objectif est de contrôler un aspect de la présentation d’un autre widget. Pour comprendre pourquoi un widget est rendu d’une certaine manière, il est souvent utile d’inspecter les widgets voisins.\bigskip
+
+\longtab \textbf{Couches de framework Flutter\medskip}
+
+Le framework Flutter est organisé en une série de couches, chaque couche s'appuyant sur la couche précédente.\medskip
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=13cm]{Images/chapter2/flutter_architecture.png}
+		\caption{{\footnotesize L'architecture de flutter\cite{noauthor_technical_nodate}}}
+	\end{center}
+\end{figure}
+
+Les couches supérieures du cadre sont utilisées plus fréquemment que les couches inférieures.\medskip
+
+Le but de cette conception est de vous aider à faire plus avec moins de code. Par exemple, le calque Matérial est construit en composant les widgets de base à partir du calque Widgets, et le calque Widgets lui-même est construit en orchestrant des objets de niveau inférieur à partir du calque de rendu.
+Les couches offrent de nombreuses options pour créer des applications.
+
+Choisissez une approche personnalisée pour libérer toute la puissance d'expression du framework, ou utilisez des blocs de construction de la couche de widgets, ou combinez-les. Vous pouvez composer les widgets prêts à l'emploi fournis par Flutter ou créer vos propres widgets personnalisés à l'aide des mêmes outils et techniques que ceux utilisés par l'équipe Flutter pour créer le framework.
+
+\subsubsection{{\large 2 - La construction de widgets}}
+Vous définissez les caractéristiques uniques d'un widget en implémentant une fonction de génération qui renvoie une arborescence (ou une hiérarchie) de widgets. Cet arbre représente la partie de l’interface utilisateur du widget de manière plus concrète. Par exemple, un widget de barre d'outils peut avoir une fonction de génération qui renvoie une disposition horizontale de texte et de divers boutons. Le framework demande ensuite de manière récursive à chacun de ces widgets de construire jusqu'à ce que le processus se transforme en widgets entièrement concrets, que le framework assemble ensuite en un arbre.\medskip
+
+La fonction de génération d’un widget doit être exempte d’effets secondaires. À chaque fois qu'il est invité à construire, le widget doit renvoyer une nouvelle arborescence de widgets, quel que soit ce que le widget a précédemment renvoyé. Le cadre fait beaucoup pour comparer la version précédente à la version actuelle et pour déterminer les modifications à apporter à l'interface utilisateur.\medskip
+
+Cette comparaison automatisée est assez efficace, permettant des applications interactives hautes performances. Et la conception de la fonction de construction simplifie votre code en vous concentrant sur la déclaration d'un widget, plutôt que sur la complexité de la mise à jour de l'interface utilisateur d'un état à un autre.
+
+\subsubsection{{\large 3 - Gestion de l'interaction utilisateur}}
+Si les caractéristiques uniques d'un widget doivent être modifiées en fonction de l'interaction de l'utilisateur ou d'autres facteurs, ce widget est avec état. Par exemple, si un widget a un compteur qui s'incrémente chaque fois que l'utilisateur appuie sur un bouton, la valeur du compteur correspond à l'état de ce widget.\medskip
+ 
+Lorsque cette valeur change, le widget doit être reconstruit pour mettre à jour l'interface utilisateur.\medskip
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=10cm]{Images/chapter2/user_interaction_graph.png}
+		\caption{{\footnotesize Modele d'une Widget Stateful\cite{noauthor_technical_nodate}}}
+	\end{center}
+\end{figure}
+
+Ces widgets sous-classent StatefulWidget (plutôt que StatelessWidget) et stockent leur état mutable dans une sous-classe d’État.\medskip
+
+Chaque fois que vous modifiez un objet State (par exemple, incrémentez le compteur), vous devez appeler setState() pour indiquer au framework de mettre à jour l'interface utilisateur en appelant à nouveau la méthode de compilation de State.\medskip
+
+Avoir des objets state et widget séparés permet à d'autres widgets de traiter les widgets sans état et avec état de la même manière, sans craindre de perdre un état. Plutôt que de devoir conserver un enfant pour préserver son état, le parent est libre de créer une nouvelle instance de l'enfant sans perdre son état persistant. La structure fait tout le travail de recherche et de réutilisation des objets d'état existants, le cas échéant.
+
+
+\subsection{Pourquoi utiliser Flutter?}
+Comme nous l'avons mentionné précédemment, il existe de nombreuses options pour développer une application mobile, qu'il s'agisse de SDK natifs ou de frameworks multiplates-formes (Xamarin, ReactNative, Ionic, PhoneGap). Pour ce projet particulier, le framework Flutter a été choisi pour plusieurs points, dont les principaux sont:
+
+
+\subsubsection{1. Multiplate-forme (cross-platform)}
+Un produit ou système informatique multiplate-forme est un produit ou système pouvant fonctionner sur plusieurs types de plates-formes ou d'environnements d'exploitation.
+
+Différents types de systèmes multiplates-formes incluent des systèmes matériels et logiciels, ainsi que des systèmes qui impliquent des versions séparées pour chaque plate-forme, ainsi que d'autres systèmes plus vastes conçus pour fonctionner de la même manière sur plusieurs plates-formes.
+La plateforme croisée est également connue en tant que plate-forme indépendante\cite{noauthor_what_nodate}
+
+Flutter offre la possibilité de créer une application compilée pour fonctionner à la fois sur Android et iOS à partir de la même base de code. Tout en maintenant l'expérience utilisateur appropriée sur chaque plate-forme.
+
+
+\subsubsection{2. Productivité}
+Flutter offre une augmentation de la productivité que provient du «rechargement à chaud» de Flutter («Stateful Hot Reload» et «Hot Restart». Ensemble, ils permettent aux développeurs de voir les modifications apportées à l'état d'une application en moins d'une seconde; structure de l'application en moins de dix.
+
+Il n’est pas nécessaire d’exécuter une autre version de Gradle. Vous voyez vos modifications dès que vous enregistrez. Pour les développeurs, cela est souvent très facile à maîtriser - il n’ya que peu ou pas de courbe d’apprentissage liée à l’utilisation du «rechargement à chaud» car, par défaut, cela se produit chaque fois que vous enregistrez. Cependant, les avantages sont essentiels. Le temps de développement est souvent réduit de 30\% à 40\%, car les délais de reconstruction de Gradle qui ralentissent le développement des développeurs Android prennent généralement plus de temps à chaque modification appliquée.
+
+\subsubsection{3. Intégration directe avec Firebase}
+Firebase fournit un support prêt à l'emploi pour un ensemble de services tels que le stockage en nuage, les fonctions de nuage, les bases de données en temps réel, l'hébergement, l'authentification et bien plus encore. Votre infrastructure est instantanément sans serveur, redondante et évolutive. Cela signifie que vous n’avez pas à passer beaucoup de temps et de ressources à construire le backend. Il est également simple de le combiner avec un outil permettant d’automatiser votre processus de développement et de publication, tel que Fastlane; faciliter la livraison continue. Par conséquent, vous n'avez pas besoin de support DevOps dédié dans votre équipe.
+
+\subsubsection{4. Performance}
+L'application est compilée à l'avance en code ARM natif, pas au moment de l'exécution, comme dans React Native. Cela donne de meilleures performances car il n’ya pas de pont JS au milieu pour analyser et exécuter le code.
+
+\subsubsection{5. L'utilisation de Dart}
+
+\begin{wrapfigure}[7]{r}{5cm}
+	\includegraphics[width=5cm]{Images/chapter2/dart_logo.png}
+	\caption{{\footnotesize Logo de Dart}}
+\end{wrapfigure}
+
+Dart est un langage de programmation polyvalent développé à l'origine par Google et ensuite approuvé en tant que norme par Ecma (ECMA-408). Il est utilisé pour créer des applications Web, serveur, bureau et mobiles.
+
+Dart est un langage basé sur les objets, orienté objet, défini par la classe et utilisant une syntaxe de style C qui transcompile éventuellement en JavaScript. Il prend en charge les interfaces, mixins, classes abstraites, génériques réifiés, typage statique et un système de type sonore.\cite{noauthor_dart_2019}\medskip
+
+Voici une liste rapide des fonctionnalités de Dart qui, ensemble, le rendent indispensable pour Flutter:
+
+\begin{list}{•}{}
+\item Dart est \acrshort{AOT} compilé en un code natif rapide et prévisible, qui permet à presque tout de Flutter d'être écrit en Dart. Cela rend non seulement Flutter rapide, mais pratiquement tout (y compris tous les widgets) peut être personnalisé.
+\item Dart peut également être compilé \acrshort{JIT} (Just In Time) pour des cycles de développement exceptionnellement rapides et un flux de travail révolutionnaire (y compris le populaire rechargement à chaud avec état sous la seconde de Flutter).
+\item Dart facilite la création d'animations lisses et de transitions exécutées à 60 images par seconde. Dart peut faire l’allocation d’objets et la collecte de place sans verrous. Et comme JavaScript, Dart évite la planification préemptive et la mémoire partagée (et donc les verrous). Les applications Flutter étant compilées en code natif, elles ne nécessitent pas de pont lent entre les domaines (par exemple, JavaScript vers natif). Ils démarrent aussi beaucoup plus vite.
+\item Dart permet à Flutter d’éviter le recours à un langage de présentation déclaratif distinct, tel que \acrshort{JSX} ou \acrshort{XML}, ou à des générateurs d’interface visuelle distincts, car la présentation déclarative et programmatique de Dart est facile à lire et à visualiser. Et avec toute la mise en page dans une langue et à un endroit, il est facile pour Flutter de fournir des outils avancés qui facilitent la mise en page.
+\item Les développeurs ont découvert que Dart est particulièrement facile à apprendre car il comporte des fonctionnalités bien connues des utilisateurs de langages statiques et dynamiques.
+\end{list}
+
+Toutes ces fonctionnalités ne sont pas propres à Dart, mais leur combinaison constitue un atout qui confère à Dart une puissance unique pour la mise en œuvre de Flutter. Tant pis, il est difficile d’imaginer que Flutter soit aussi puissant qu’il est sans Dart.\cite{leler_why_2018}
 
 
 \section{Firebase}
