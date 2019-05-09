@@ -59,7 +59,9 @@ React Native est très populaire (et mérite de l'être), mais comme le domaine 
 
 Flutter est un SDK pour applications mobiles permettant de créer des applications hautes performances et haute fidélité pour iOS et Android à partir d'une seule base de code\cite{noauthor_technical_nodate}.\medskip
 
-L'objectif est de permettre aux développeurs de proposer des applications hautes performances qui se sentent naturelles sur différentes plates-formes. Nous adoptons des différences dans les comportements de défilement, la typographie, les icônes, etc.\bigskip
+L'objectif est de permettre aux développeurs de proposer des applications hautes performances qui se sentent naturelles sur différentes plates-formes.
+
+Nous adoptons des différences dans les comportements de défilement, la typographie, les icônes, etc.\bigskip
 
 \begin{figure}[h]
 	\begin{center}
@@ -207,6 +209,162 @@ Toutes ces fonctionnalités ne sont pas propres à Dart, mais leur combinaison c
 
 
 \section{Firebase}
+\subsection{Introduction}
+
+\begin{wrapfigure}[6]{r}{5cm}
+	\includegraphics[width=5cm]{Images/chapter2/firebase_logo.png}
+	\caption{{\footnotesize Logo de Firebase}}
+\end{wrapfigure}
+
+Firebase est une plate-forme de développement d'applications mobiles et Web qui fournit aux développeurs une multitude d'outils et de services pour les aider à développer des applications de haute qualité, à développer leur base d'utilisateurs et à générer davantage de bénéfices.\cite{geekyants_introduction_2017}
+\newpage
+
+\subsection{Bref historique}
+En 2011, avant que Firebase fût Firebase, c'était une startup appelée Envolve. En tant que Envolve, il fournissait aux développeurs une API qui permettait l'intégration de la fonctionnalité de discussion en ligne dans leur site Web.
+
+Qu'est ce que c'est? Il est intéressant de noter que c'est utilisé pour envoyer des messages. Les développeurs utilisaient Envolve pour synchroniser les données des applications en tant qu'état de jeu en temps réel sur l'ensemble de leurs utilisateurs.
+
+Ceci a conduit les fondateurs d’Envolve, James Tamplin et Andrew Lee, à séparer le système de chat et l’architecture en temps réel. En avril 2012, Firebase a été créée en tant que société distincte fournissant un système de gestion en temps réel.
+
+Après son acquisition en 2014, Firebase a rapidement évolué pour devenir le monstre multifonctionnel d’une plate-forme mobile et Web qu’il est aujourd’hui.
+
+\subsection{Les services de Firebase}
+les services de Firebase peuvent être divisé en trois groupes:\bigskip\\
+\longtab \textbf{1 - Construction des meilleures applications:}\bigskip
+
+\begin{wrapfigure}[4]{l}{1cm}
+	\includegraphics[width=1cm]{Images/chapter2/firebase_services/firestore.png}
+\end{wrapfigure}
+\textbf{Firestore Cloud} Stockez et synchronisez des données entre utilisateurs et appareils - à l'échelle mondiale - à l'aide d'une base de données NoSQL hébergée dans le cloud. Cloud Firestore vous offre une synchronisation en direct et une assistance hors ligne, ainsi que des requêtes de données efficaces. Son intégration avec d'autres produits Firebase vous permet de créer de véritables applications sans serveur.\medskip
+
+\begin{wrapfigure}[4]{l}{1cm}
+	\includegraphics[width=1cm]{Images/chapter2/firebase_services/mlkit.png}
+\end{wrapfigure}
+\textbf{Kit ML \textsuperscript{BETA} \acrshort{BETA}} Intégrez de puissantes fonctionnalités d'apprentissage automatique (Machine Learning) à votre application mobile, que vous soyez débutant ou expérimenté dans \acrshort{ML}. Commencez facilement en utilisant les API prêtes à l'emploi pour les cas d'utilisation courants des appareils mobiles ou importez vos propres modèles personnalisés qui peuvent être hébergés et fournis à vos applications par Firebase. Les API du kit ML peuvent s'exécuter sur le périphérique ou dans le cloud, en fonction des fonctionnalités. Certaines vous offrent les deux choix.\medskip\\
+
+\begin{wrapfigure}[3]{l}{1cm}
+	\includegraphics[width=1cm]{Images/chapter2/firebase_services/cloud_function.png}
+\end{wrapfigure}
+\textbf{Fonctions Cloud} Étendez votre application avec du code d’arrière-plan personnalisé sans avoir à gérer et à faire évoluer vos propres serveurs. Les fonctions peuvent être déclenchées par des événements, émis par des produits Firebase, des services Google Cloud ou des tiers, à l'aide de \gls{Webhook}s.\medskip
+
+\begin{wrapfigure}[4]{l}{1cm}
+	\includegraphics[width=1cm]{Images/chapter2/firebase_services/authentication.png}
+\end{wrapfigure}
+\textbf{Authentification} Gérez vos utilisateurs de manière simple et sécurisée. Firebase Auth propose plusieurs méthodes d’authentification, notamment un courrier électronique et un mot de passe, des fournisseurs tiers tels que Google ou Facebook et l’utilisation directe de votre système de compte existant. Construisez votre propre interface ou profitez de l'interface utilisateur open source entièrement personnalisable.\medskip
+
+\begin{wrapfigure}[4]{l}{1cm}
+	\includegraphics[width=1cm]{Images/chapter2/firebase_services/hosting.png}
+\end{wrapfigure}
+\textbf{Hébergement} Simplifiez votre hébergement Web avec des outils spécialement conçus pour les applications Web modernes. Lorsque vous téléchargez vos ressources Web, ils seront automatiquement transféré vers le CDN mondial de la platforme Firebase et ils aient attribué un certificat SSL gratuit afin que vos utilisateurs bénéficient d'une expérience sécurisée, fiable et à faible latence, où qu'ils se trouvent.\medskip
+
+\begin{wrapfigure}[4]{l}{1cm}
+	\includegraphics[width=1cm]{Images/chapter2/firebase_services/cloud_storage.png}
+\end{wrapfigure}
+\textbf{Stockage en ligne} Stockez et partagez des contenus générés par les utilisateurs, tels que des images, du son et de la vidéo, avec un stockage d’objets puissant, simple et économique, conçu à l’échelle de Google. Les SDK Firebase pour le stockage en nuage ajoutent la sécurité Google aux téléchargements de fichiers et aux téléchargements pour vos applications Firebase, quelle que soit la qualité du réseau.\medskip
+
+\begin{wrapfigure}[4]{l}{1cm}
+	\includegraphics[width=1cm]{Images/chapter2/firebase_services/realtime_database.png}
+\end{wrapfigure}
+\textbf{Base de données en temps réel} Stockez et synchronisez les données entre les utilisateurs et les périphériques en temps réel à l'aide d'une base de données NoSQL hébergée dans le cloud. Les données mises à jour se synchronisent sur les appareils connectés en quelques millisecondes. Les données restent disponibles si votre application est déconnectée, offrant ainsi une expérience utilisateur exceptionnelle, quelle que soit la connectivité réseau.\bigskip
+
+\longtab \textbf{2 - Amélioration de la qualité de l'application:}\bigskip
+
+\begin{wrapfigure}[4]{l}{1cm}
+	\includegraphics[width=1cm]{Images/chapter2/firebase_services/crashlytics.png}
+\end{wrapfigure}
+\textbf{Crashlytics} Réduisez votre temps de dépannage en transformant une avalanche de collisions en une liste de problèmes gérables. Obtenez des informations claires et exploitables sur les problèmes à résoudre en premier en observant l'impact de l'utilisateur sur le tableau de bord de Crashlytics. Les alertes en temps réel vous aideront à rester au top de votre stabilité, même lors de vos déplacements. Crashlytics est le principal journaliste de crash pour Firebase.\medskip
+
+\begin{wrapfigure}[3]{l}{1cm}
+	\includegraphics[width=1cm]{Images/chapter2/firebase_services/performance_monitoring.png}
+\end{wrapfigure}
+\textbf{Suivi de la performance} Diagnostiquez les problèmes de performances des applications survenant sur les appareils de vos utilisateurs. Utilisez des traces pour surveiller les performances de parties spécifiques de votre application et consultez une vue résumée de la console Firebase. Surveillez les heures de démarrage de votre application et surveillez les requêtes HTTP sans écrire de code.\medskip
+
+\begin{wrapfigure}[4]{l}{1cm}
+	\includegraphics[width=1cm]{Images/chapter2/firebase_services/test_lab.png}
+\end{wrapfigure}
+\textbf{Laboratoire de test} Exécutez des tests automatiques et personnalisés pour votre application sur des périphériques virtuels et physiques hébergés par Google. Utilisez le laboratoire de test Firebase tout au long de votre cycle de développement pour détecter les bogues et les incohérences afin de pouvoir offrir une expérience inoubliable sur une grande variété de périphériques.\bigskip
+
+\longtab \textbf{3 - Développement d'entreprise:}\bigskip
+
+\begin{wrapfigure}[4]{l}{1cm}
+	\includegraphics[width=1cm]{Images/chapter2/firebase_services/in-app_messaging.png}
+\end{wrapfigure}
+\textbf{Messagerie In-App} Engagez et entretenez vos utilisateurs actifs avec des messages ciblés et contextuels qui les encouragent à effectuer des actions significatives au sein de votre application. Vous avez le pouvoir de déclencher des messages en fonction du comportement et des intérêts de l'utilisateur. Vous pouvez également personnaliser la conception des messages intégrés à votre marque. La messagerie in-app prend en charge un grand nombre de cas d'utilisation et de formats.\medskip
+
+\begin{wrapfigure}[4]{l}{1cm}
+	\includegraphics[width=1cm]{Images/chapter2/firebase_services/google_analytics.png}
+\end{wrapfigure}
+\textbf{Google Analytics} Analysez les attributions et les comportements des utilisateurs dans un seul tableau de bord pour prendre des décisions éclairées concernant votre feuille de route. Obtenez des informations en temps réel à partir des rapports ou exportez vos données d'événements brutes vers Google BigQuery pour une analyse personnalisée.\medskip
+
+\begin{wrapfigure}[4]{l}{1cm}
+	\includegraphics[width=1cm]{Images/chapter2/firebase_services/predictions.png}
+\end{wrapfigure}
+\textbf{Prédictions} Exploitez toute la puissance de l’apprentissage automatique de Google pour avoir une idée des segments d’utilisateurs susceptibles d’abandonner ou de dépenser (ou de terminer un autre événement de conversion). Utilisez ces segments prédictifs intelligents pour le ciblage dans d'autres produits tels que la configuration à distance, la messagerie en nuage et la messagerie intégrée.\medskip
+
+\begin{wrapfigure}[4]{l}{1cm}
+	\includegraphics[width=1cm]{Images/chapter2/firebase_services/a_b_testing.png}
+\end{wrapfigure}
+\textbf{Test A / B \textsuperscript{BETA}} Améliorez votre application en exécutant des expériences sur les produits et le marketing, sans vous soucier de la configuration de l'infrastructure pour l'exécution de tests A / B. Personnalisez les expériences en fonction de vos objectifs. Testez diverses mises à jour de votre application, telles que la copie de messages ou de nouvelles fonctionnalités. Ensuite, seules les modifications de déploiement permettant de déplacer l'aiguille sur vos indicateurs clés ont été prouvées.\medskip
+
+\begin{wrapfigure}[4]{l}{1cm}
+	\includegraphics[width=1cm]{Images/chapter2/firebase_services/cloud_messaging.png}
+\end{wrapfigure}
+\textbf{Cloud Messaging} Send messages and notifications to users across platforms—Android, iOS, and the web—for free. Messages can be sent to single devices, groups of devices, or specific topics or user segments. Firebase Cloud Messaging (FCM) scales to even the largest apps, delivering hundreds of billions of messages per day.\medskip
+
+\begin{wrapfigure}[4]{l}{1cm}
+	\includegraphics[width=1cm]{Images/chapter2/firebase_services/remote_config.png}
+\end{wrapfigure}
+\textbf{Configuration à distance} Personnalisez le rendu de votre application pour chaque utilisateur. Modifiez l'apparence, déployez les fonctionnalités progressivement, exécutez des tests A / B, fournissez un contenu personnalisé à certains utilisateurs ou effectuez d'autres mises à jour sans déployer une nouvelle version, le tout à partir de la console Firebase. Surveillez l'impact de vos modifications et apportez des modifications en quelques minutes.\medskip
+
+\begin{wrapfigure}[4]{l}{1cm}
+	\includegraphics[width=1cm]{Images/chapter2/firebase_services/dynamic_links.png}
+\end{wrapfigure}
+\textbf{Liens dynamiques} Utilisez les liens dynamiques pour offrir une expérience utilisateur personnalisée pour iOS, Android et le Web. Vous pouvez les utiliser pour alimenter le Web mobile afin de générer des conversions d'applications natives, le partage d'utilisateur à utilisateur, des campagnes sociales et marketing, etc. Dynamic Links vous fournit les attributions dont vous avez besoin pour mieux comprendre votre croissance mobile.\medskip
+
+\begin{wrapfigure}[4]{l}{1cm}
+	\includegraphics[width=1cm]{Images/chapter2/firebase_services/app_indexing.png}
+\end{wrapfigure}
+\textbf{Indexation d'applications} Réengagez les utilisateurs avec leurs applications installées avec cette intégration de Google Search. Si les utilisateurs ont votre application et recherchent du contenu associé, ils peuvent la lancer directement à partir des résultats. Si les utilisateurs ne disposent pas encore de votre application, une carte d'installation s'affiche lorsqu'ils recherchent des applications similaires.\medskip
+
+\subsection{Pourquoi utiliser Firebase?}
+Bien que la grande majorité de la communauté des développeurs soit d’accord sur le fait que Firebase est le meilleur BaaS (Backend as a Service) disponible à ce jour, il est toujours vrai qu’il existe d’autres solutions. C’est en plus de la solution traditionnelle de construction et de gestion de votre propore infrastructure backend.
+
+\begin{wrapfigure}[4]{r}{3cm}
+	\includegraphics[width=3cm]{Images/chapter2/parse_logo.png}
+	\caption{{\footnotesize Logo de Parse}}
+\end{wrapfigure}
+
+L’une des alternatives les plus remarquables à Firebase est Parse, la plate-forme acquise par Facebook, qui peut être plus abordable que la plate-forme de Google sur le long terme, mais qui offre moins de services, peut être assez compliquée à mettre en place et manque de support structuré. D'autres plates-formes telles que Back4app, Kinvey, Backendless, Kuzzle, Hoodie et autres offrent des services similaires avec quelques différences.
+
+Cependant, comparé à Firebase, ce dernier s’est révélé être la solution la plus appropriée pour notre projet, pour les points suivants.
+
+\subsubsection{Créer des applications rapidement sans gestion d'infrastructure}
+L’un des aspects les plus fondamentaux et les plus attrayants de l’utilisation de Firebase est qu’elle permet aux créateurs de se concentrer entièrement sur l’application en cours de développement, outre le fait d’avoir une attention partagée entre le développement de l’application et la création et la gestion de l’infrastructure backend, qui de nos jours, est un projet à lui même, nécessitant une équipe dédiée et une communication solide avec l'equipe que s'occupe de developpement de l'application.
+
+Avec Firebase, vous êtes en mesure de faire fonctionner votre application rapidement grâce aux mécanismes de configuration simples fournis par la plateforme.
+
+\subsubsection{Backend par Google, approuvé par les meilleures applications}
+Les meilleures applications du marché font confiance aux produits Google. Les produits Google ne manquent généralement pas d'excellents résultats. Dans le cas de Firebase, il est utilisé par 793 entreprises\cite{noauthor_companies_nodate}, notamment "The New York Times", "Alibaba", "Twitch" et de nombreuses autres.\bigskip
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=13cm]{Images/chapter2/trusting_apps.png}
+		\caption{{\footnotesize Echantaillons des entreprises et applications que utilisent Firebase}}
+	\end{center}
+\end{figure}
+
+\subsubsection{Facile à intégrer avec Flutter}
+Flutter a été créé dans le but de le faire fonctionner sans problème pour Firebase. L'ensemble du processus d'intégration peut prendre jusqu'à 10 minutes, sans qu'il soit nécessaire de fournir beaucoup de données et le processus est totalement simple.\cite{noauthor_using_nodate}
+
+\subsubsection{Tarification flexible}
+Firebase offre aux développeurs un modèle de tarification \gls{freemium} flexible et, dans une certaine mesure, généreux, adoptant l’approche consistant à payer à l’échelle de votre application, en commençant par une offre gratuite dans laquelle vous obtenez une quantité limitée de données à stocker et des requêtes de lecture limitées effectuées par pour les applications en croissance, les développeurs peuvent payer un prix fixe pour une utilisation étendue des services de la plate-forme, ainsi que davantage de stockage de données et de requêtes, pour enfin atteindre l'offre illimitée dans laquelle vous êtes facturé pour ce que vous avez utilisé.\cite{noauthor_firebase_nodate}\bigskip
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=14cm]{Images/chapter2/firebase_pricing_offers.png}
+		\caption{{\footnotesize différents modèles de tarification de Firebase}}
+	\end{center}
+\end{figure}
 
 \section{Google Maps}
 
