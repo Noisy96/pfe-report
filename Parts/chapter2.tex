@@ -9,7 +9,7 @@ Le développement d'applications mobiles est un domaine d'activité relativement
 \newpage
 
 \subsection{Les kits de développement de plate-forme (Platform SDKs)}
-Le SDK Apple iOS est sorti en 2008 et le SDK Google Android en 2009. Ces deux SDK étaient basés sur des langages différents: Objective-C et Java, respectivement.
+Le SDK Apple iOS est sorti en 2008 et le \acrshort{SDK} Google Android en 2009. Ces deux SDK étaient basés sur des langages différents: Objective-C et Java, respectivement.
 Votre application communique avec la plateforme pour créer des widgets ou accéder à des services tels que la caméra. Les widgets sont rendus dans un canevas d’écran et les événements sont renvoyés aux widgets. C'est une architecture simple, mais vous devez créer des applications séparées pour chaque plate-forme car les widgets sont différents, sans parler des langues natives\cite{leler_whats_2017}.
 
 \begin{figure}[h]
@@ -59,9 +59,7 @@ React Native est très populaire (et mérite de l'être), mais comme le domaine 
 
 Flutter est un SDK pour applications mobiles permettant de créer des applications hautes performances et haute fidélité pour iOS et Android à partir d'une seule base de code\cite{noauthor_technical_nodate}.\medskip
 
-L'objectif est de permettre aux développeurs de proposer des applications hautes performances qui se sentent naturelles sur différentes plates-formes.
-
-Nous adoptons des différences dans les comportements de défilement, la typographie, les icônes, etc.\bigskip
+L'objectif est de permettre aux développeurs de proposer des applications hautes performances qui se sentent naturelles sur différentes plates-formes.\bigskip
 
 \begin{figure}[h]
 	\begin{center}
@@ -220,7 +218,7 @@ Firebase est une plate-forme de développement d'applications mobiles et Web qui
 \newpage
 
 \subsection{Bref historique}
-En 2011, avant que Firebase fût Firebase, c'était une startup appelée Envolve. En tant que Envolve, il fournissait aux développeurs une API qui permettait l'intégration de la fonctionnalité de discussion en ligne dans leur site Web.
+En 2011, avant que Firebase fût Firebase, c'était une startup appelée Envolve. En tant que Envolve, il fournissait aux développeurs une \gls{API} qui permettait l'intégration de la fonctionnalité de discussion en ligne dans leur site Web.
 
 Qu'est ce que c'est? Il est intéressant de noter que c'est utilisé pour envoyer des messages. Les développeurs utilisaient Envolve pour synchroniser les données des applications en tant qu'état de jeu en temps réel sur l'ensemble de leurs utilisateurs.
 
@@ -338,25 +336,25 @@ L’une des alternatives les plus remarquables à Firebase est Parse, la plate-f
 
 Cependant, comparé à Firebase, ce dernier s’est révélé être la solution la plus appropriée pour notre projet, pour les points suivants.
 
-\subsubsection{Créer des applications rapidement sans gestion d'infrastructure}
+\subsubsection{1. Créer des applications rapidement sans gestion d'infrastructure}
 L’un des aspects les plus fondamentaux et les plus attrayants de l’utilisation de Firebase est qu’elle permet aux créateurs de se concentrer entièrement sur l’application en cours de développement, outre le fait d’avoir une attention partagée entre le développement de l’application et la création et la gestion de l’infrastructure backend, qui de nos jours, est un projet à lui même, nécessitant une équipe dédiée et une communication solide avec l'equipe que s'occupe de developpement de l'application.
 
 Avec Firebase, vous êtes en mesure de faire fonctionner votre application rapidement grâce aux mécanismes de configuration simples fournis par la plateforme.
 
-\subsubsection{Backend par Google, approuvé par les meilleures applications}
+\subsubsection{2. Backend par Google, approuvé par les meilleures applications}
 Les meilleures applications du marché font confiance aux produits Google. Les produits Google ne manquent généralement pas d'excellents résultats. Dans le cas de Firebase, il est utilisé par 793 entreprises\cite{noauthor_companies_nodate}, notamment "The New York Times", "Alibaba", "Twitch" et de nombreuses autres.\bigskip
 
 \begin{figure}[h]
 	\begin{center}
 		\includegraphics[width=13cm]{Images/chapter2/trusting_apps.png}
-		\caption{{\footnotesize Echantaillons des entreprises et applications que utilisent Firebase}}
+		\caption{{\footnotesize Échantillonne des entreprises et applications que utilisent Firebase}}
 	\end{center}
 \end{figure}
 
-\subsubsection{Facile à intégrer avec Flutter}
+\subsubsection{3. Facile à intégrer avec Flutter}
 Flutter a été créé dans le but de le faire fonctionner sans problème pour Firebase. L'ensemble du processus d'intégration peut prendre jusqu'à 10 minutes, sans qu'il soit nécessaire de fournir beaucoup de données et le processus est totalement simple.\cite{noauthor_using_nodate}
 
-\subsubsection{Tarification flexible}
+\subsubsection{4. Tarification flexible}
 Firebase offre aux développeurs un modèle de tarification \gls{freemium} flexible et, dans une certaine mesure, généreux, adoptant l’approche consistant à payer à l’échelle de votre application, en commençant par une offre gratuite dans laquelle vous obtenez une quantité limitée de données à stocker et des requêtes de lecture limitées effectuées par pour les applications en croissance, les développeurs peuvent payer un prix fixe pour une utilisation étendue des services de la plate-forme, ainsi que davantage de stockage de données et de requêtes, pour enfin atteindre l'offre illimitée dans laquelle vous êtes facturé pour ce que vous avez utilisé.\cite{noauthor_firebase_nodate}\bigskip
 
 \begin{figure}[h]
@@ -365,7 +363,41 @@ Firebase offre aux développeurs un modèle de tarification \gls{freemium} flexi
 		\caption{{\footnotesize différents modèles de tarification de Firebase}}
 	\end{center}
 \end{figure}
+\newpage
 
-\section{Google Maps}
+\section{Google APIs}
+Les API Google sont un ensemble d'interfaces de programmation d'applications (API) développées par Google qui permettent la communication avec Google Services et leur intégration à d'autres services. Parmi ceux-ci figurent Search, Gmail, Translate ou Google Maps. Les applications tierces peuvent utiliser ces API pour exploiter ou étendre les fonctionnalités des services existants.
 
-\section{Google Books}
+Les API fournissent des fonctionnalités telles que l'analyse, l'apprentissage automatique en tant que service (l'API de prédiction) ou l'accès aux données utilisateur (lorsque l'autorisation de lire les données est donnée). Un autre exemple important est une carte Google intégrée sur un site Web, qui peut être réalisée à l'aide de l'API Static Maps, API Places ou de Google Earth.\cite{noauthor_google_2019}
+
+Les deux API (Books, Maps) s'appellent RESTful car elles sont basée sur l'architecture \gls{REST} qu'elle est basée sur le protocole \acrshort{HTTP} permettant de récupérer les données au format \acrshort{JSON}.
+
+\subsection{Google Maps}
+
+\begin{wrapfigure}[20]{r}{4cm}
+	\includegraphics[width=4cm]{Images/chapter3/maps_android_sdk.png}
+	\caption{{\footnotesize Exemple de l'intégration de cartes Google Maps pour Android}}
+\end{wrapfigure}
+
+Google Maps est un service de cartographie Web développé par Google. Il propose des images satellite, des photographies aériennes, des cartes routières, des vues panoramiques à 360 ° sur les rues (Street View), les conditions de circulation en temps réel, ainsi que la planification d'itinéraire pour les déplacements à pied, en voiture, à vélo et en avion (en version bêta), ou les transports en commun.
+
+Avec le kit de développement (SDK) de cartes pour Android, vous pouvez ajouter des cartes basées sur des données Google Maps à votre application. L'API gère automatiquement l'accès aux serveurs Google Maps, le téléchargement de données, l'affichage des cartes et la réponse aux mouvements de la carte. Vous pouvez également utiliser des appels d'API pour ajouter des marqueurs, des polygones et des superpositions à une carte de base, ainsi que pour modifier la vue de l'utilisateur sur une zone de carte particulière. Ces objets fournissent des informations supplémentaires sur les emplacements de carte et permettent une interaction de l'utilisateur avec la carte. L'API vous permet d'ajouter ces graphiques à une carte:
+
+\begin{list}{•}{}
+\item Icônes ancrées à des positions spécifiques sur la carte (marqueurs).
+\item Ensembles de segments de ligne (polylignes).
+\item Segments fermés (polygones).
+\item Graphiques bitmap ancrés à des positions spécifiques sur la carte (superpositions au sol).
+\item Ensembles d'images affichés en haut des mosaïques de la carte de base (superpositions de mosaïque).
+\end{list}
+
+\subsection{Google Books}
+Google Books (anciennement Google Books Search et Google Print et son nom de code Project Ocean) est un service de Google Inc. qui effectue une recherche dans le texte intégral des livres et des magazines scannés par Google et convertis en texte à l'aide de la reconnaissance optique de caractères. (OCR), et stocké dans sa base de données numérique. Les livres sont fournis par les éditeurs et les auteurs, via le programme Partenaires Google Books, ou par les partenaires bibliothèques de Google, via le projet Library. De plus, Google s'est associé à plusieurs éditeurs de magazines pour numériser leurs archives.\cite{noauthor_google_nodate}
+
+La nouvelle API v1 de Google Books vous permet d'accéder par programme à de nombreuses opérations disponibles sur le site Web de Google Books. Vous pouvez l'utiliser pour créer des applications puissantes offrant une intégration plus poussée avec Google Books. Les principales fonctionnalités de l'API sont les suivantes:
+
+\begin{list}{•}{}
+\item rechercher et parcourir la liste des livres correspondant à une requête donnée.
+\item afficher des informations sur un livre, notamment les métadonnées, la disponibilité et le prix, ainsi que des liens vers la page d'aperçu.
+\item gérer vos propres étagères.
+\end{list}
