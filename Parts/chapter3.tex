@@ -12,18 +12,16 @@ La pratique des conceptions logicielles n’est pas une pratique rigide dans laq
 \subsection{Diagrammes de base}
 \subsubsection{Diagrammes de séquence}
 
-\begin{figure}[h]
-	\begin{center}
-		\includegraphics[width=8cm]{Images/chapter3/rechercher_un_livre.jpg}
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=10cm]{Images/chapter3/rechercher_un_livre.jpg}
 		\caption{{\footnotesize l'enchaînement des actions pour la recherche d'un  livre particulier}}
-	\end{center}
 \end{figure}
 
-\begin{figure}[h]
-	\begin{center}
-		\includegraphics[width=8cm]{Images/chapter3/explorer_les_livres.jpg}
-		\caption{{\footnotesize l'exploration des livres/utilisateurs à proximité}}
-	\end{center}
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=10cm]{Images/chapter3/explorer_les_livres.jpg}
+		\caption{{\footnotesize l'enchaînement des actions l'exploration des livres/utilisateurs à proximité}}
 \end{figure}
 
 \newpage
@@ -37,10 +35,166 @@ La pratique des conceptions logicielles n’est pas une pratique rigide dans laq
 	\end{center}
 \end{figure}
 
+\newpage
 \subsection{Maquette fonctionnelle (Wireframe)}
+\subsubsection{Définition}
 Le wireframe ou maquette fonctionnelle est un schéma utilisé lors de la conception d'une interface pour définir les zones et composants qu'elle doit contenir. À partir d'un wireframe peut être réalisée l'interface proprement dite par un graphiste. La démarche de recourir à des wireframes s'inscrit dans une recherche d'ergonomie. Elle est surtout utilisée dans le cadre du développement logiciel et des sites et applications Web. Le wireframe consiste concrètement en un croquis, un collage papier ou un schéma numérique\cite{noauthor_wireframe_nodate}.
 
+\subsubsection{Les différentes écrans}
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[height=8cm]{Images/chapter3/wireframe/sign_in.png}
+		\caption{{\footnotesize Écran d'identification}}
+	\end{center}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[height=8cm]{Images/chapter3/wireframe/sign_up.png}
+		\caption{{\footnotesize Écran d'inscription}}
+	\end{center}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=14cm]{Images/chapter3/wireframe/home.png}
+		\caption{{\footnotesize Écran de recherche (Accueil) + résultat}}
+	\end{center}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[height=8cm]{Images/chapter3/wireframe/explore.png}
+		\caption{{\footnotesize Écran d'exploration}}
+	\end{center}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[height=8cm]{Images/chapter3/wireframe/adding_a_book.png}
+		\caption{{\footnotesize Écran d'ajout des livres}}
+	\end{center}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[height=8cm]{Images/chapter3/wireframe/messages.png}
+		\caption{{\footnotesize Écran des messages + Textos}}
+	\end{center}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[height=8cm]{Images/chapter3/wireframe/profile.png}
+		\caption{{\footnotesize Écran de profil de l'utilisateur authentifié}}
+	\end{center}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[height=8cm]{Images/chapter3/wireframe/displaying_a_book_details.png}
+		\caption{{\footnotesize Fenêtre des détails de livre}}
+	\end{center}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[height=8cm]{Images/chapter3/wireframe/settings.png}
+		\caption{{\footnotesize Écran des réglages}}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[height=8cm]{Images/chapter3/wireframe/saved_for_later.png}
+		\caption{{\footnotesize Écran des livres sauvegardes}}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[height=8cm]{Images/chapter3/wireframe/other_profile.png}
+		\caption{{\footnotesize Écran de profil d'un autre utilisateur}}
+\end{figure}
+
+\newpage
+
+\subsubsection{Outil utilisé (Balsamiq Mockups)}
+
+\begin{wrapfigure}[5]{r}{2cm}
+	\includegraphics[width=2cm]{Images/chapter3/balsamiq_logo.png}
+	\vspace{-20pt}
+	\caption{{\footnotesize Logo de Balsamiq}}
+\end{wrapfigure}
+
+Balsamiq Mockups est un outil de conception d'interface utilisateur permettant de créer des structures filaires (également appelées maquettes ou prototypes basse fidélité). Vous pouvez l'utiliser pour générer des esquisses numériques de vos idées de produits afin de faciliter la discussion et la compréhension avant l'écriture de tout code.\cite{noauthor_balsamiq_nodate}\\\\
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=14cm]{Images/chapter3/balsamiq_ui_overview.png}
+		\caption{{\footnotesize l'interface de Balsamiq Mockups}}
+\end{figure}
 
 
+\newpage
+\subsection{Prototypage logiciel}
+\subsubsection{Introduction}
+Les équipes de développement sont généralement peu disposées à mettre en œuvre une phase de prototypage pour concevoir l’interface, car elles craignent de devoir en attendre la fin pour démarrer effectivement le développement, rallongeant d’autant le planning du projet. Pourtant, il peut être judicieux d'intégrer le prototypage dans la phase de spécification fonctionnelle, afin de valider puis définir les exigences et comportements à développer. De même, il est possible de jouer sur la fidélité du prototype, c’est-à-dire sa ressemblance par rapport au produit final en termes d’interactivité et de graphisme.
 
-\section{Implémentation}
+Et pour cela, nous avons décidé de créer un prototype afin de tester l'interactivité de la solution et de chercher plus en détail les défauts qui n'auraient peut-être pas été découverts au cours des phases initiales du conception. En outre, le projet étant un travail combiné de deux étudiants, nous avions besoin d’un chemin clair et précis à suivre pendant la phase de développement.
+
+Nous avons utilisé le type de prototypage horizontal, tout en respectant les directives de Material Design. Pour l'outil, la solution la plus appropriée était Adobe XD. Toutes ces solutions seront décrites plus en détail dans les sections suivantes.
+
+\subsubsection{Définition}
+Le prototypage logiciel est l’activité de création de prototypes d’applications logicielles, c’est-à-dire des versions incomplètes du programme logiciel en cours de développement. C’est une activité qui peut exister dans le développement de logiciels et qui est comparable au prototypage connu dans d’autres domaines, tels que le génie mécanique ou la fabrication.
+
+Un prototype ne simule généralement que quelques aspects du produit final et peut être complètement différent de celui-ci\cite{noauthor_software_nodate}.
+
+\subsubsection{Le prototype horizontal}
+Le prototypage consiste à concevoir des versions intermédiaires et donc incomplètes d'un logiciel ou d'un site web, conçues pour tester l'utilisation avant la phase proprement dite de programmation informatique. Dans le cadre d'une intervention ergonomique, la phase de prototypage permet de tester l'utilisation et l'utilisabilité d'un produit auprès d'utilisateurs (test utilisateur). Il se distingue de la maquette fil de fer (ou wireframe) en simulant le fonctionnement avec des données fictives ou réelles. Plusieurs types et niveaux de finition sont possibles, selon la démarche de conception d'un logiciel ou d'un site Web. Le prototypage s’inscrit dans une démarche de conception itérative de l’interface, en particulier dans la démarche de conception centrée sur l'utilisateur. Il vise à améliorer progressivement l’interface en s’appuyant sur l’analyse du comportement des utilisateurs finaux lorsqu'ils se servent du produit\cite{noauthor_prototypage_nodate}.
+
+\subsubsection{Material Design}
+
+Le Material Design est un ensemble de règles de design proposées par Google et qui s'appliquent à l'interface graphique des logiciels et applications. Il est utilisé notamment à partir de la version 5.0 du système d'exploitation Android.
+
+Google a présenté le Material Design pour la première fois lors de la conférence Google I/O, le 25 juin 2014. En misant sur les motifs « carte », déjà utilisés dans Google Now, ces règles de design mettent l'accent sur une utilisation accrue des mises en page basées sur une grille, des animations et des transitions, des effets de profondeur tels l'éclairage et les ombres. Selon Google ce nouveau langage de design est basé sur le papier et l'encre.
+
+Le designer Matías Duarte explique que « contrairement au vrai papier, notre matériau numérique peut s'étirer et se modifier de manière intelligente. Le matériau contextuel a une surface physique et des bords. Les superpositions et les ombres donnent des informations sur ce que vous pouvez toucher ».\cite{noauthor_material_2018}.
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=14cm]{Images/chapter3/material_design.jpg}
+		\caption{{\footnotesize Des composents d'interface graphique que respectants les règles de Material Design}}
+\end{figure}
+
+\subsubsection{Outil utilisé (Adobe Xd)}
+
+\begin{wrapfigure}[10]{r}{3cm}
+	\vspace{-10pt}
+	\includegraphics[width=3cm]{Images/chapter3/adobe_xd_logo.png}
+	\vspace{-10pt}
+	\caption{{\footnotesize Logo de Adobe Xd}}
+\end{wrapfigure}
+
+Adobe XD est un outil vectoriel développé et publié par Adobe Inc pour la conception et la prototypage de l'expérience utilisateur pour les applications Web et mobiles. Le logiciel est disponible pour macOS, Windows, iOS et Android.
+
+Adobe a annoncé pour la première fois qu'il développait un nouvel outil de conception et de prototypage d'interface sous le nom de "Project Comet" lors de la conférence Adobe MAX en octobre 2015. La première version bêta publique a été publiée pour macOS en tant que "Adobe Experience Design CC" pour les utilisateurs disposant d'un compte Adobe le 14 mars 2016. Une version bêta d'Adobe XD est sortie pour Windows 10 le 13 décembre 2016. Le 18 octobre 2017, Adobe a annoncé qu'Adobe XD n'était plus en version bêta.
+
+Cet outil permet aux utilisateurs de créer des interfaces utilisateur pour les applications mobiles et Web. XD offre de nombreuses fonctionnalités permettant un design et des fonctionnalités créatifs. Auparavant, de nombreuses fonctionnalités de XD étaient difficiles à utiliser ou inexistantes dans d’autres applications de conception Adobe telles que Illustrator ou Photoshop. Adobe XD est livré avec des kits d'interface utilisateur pour Apple iOS, Microsoft Windows et Google Material Design déjà intégrés.\cite{noauthor_adobe_2019}
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=14cm]{Images/chapter3/adobe_xd_interface.png}
+		\caption{{\footnotesize l'interface de Adobe Xd}}
+\end{figure}
+
+\subsubsection{La maquette de prototype (UI Design)}
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=14cm]{Images/chapter3/ui-design_1.png}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=14cm]{Images/chapter3/ui-design_2.png}
+		\caption{{\footnotesize Le design des différentes écrans de l'application}}
+\end{figure}
