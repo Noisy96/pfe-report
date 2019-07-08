@@ -162,7 +162,7 @@ Le designer Matías Duarte explique que « contrairement au vrai papier, notre m
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=14cm]{Images/chapter3/material_design.jpg}
-		\caption{{\footnotesize Des composents d'interface graphique que respectants les règles de Material Design}}
+		\caption{{\footnotesize Des composents d'interface graphique respectants les règles de Material Design}}
 \end{figure}
 
 \subsubsection{Outil utilisé (Adobe Xd)}
@@ -198,3 +198,83 @@ Cet outil permet aux utilisateurs de créer des interfaces utilisateur pour les 
 		\includegraphics[width=14cm]{Images/chapter3/ui-design_2.png}
 		\caption{{\footnotesize Le design des différentes écrans de l'application}}
 \end{figure}
+
+\newpage
+
+\section{Implémentation}
+\subsection{Introduction}
+Après la phase de conception, vient la mise en œuvre, qui consiste en une série d’actions aboutissant à un logiciel entièrement formé à la fin, tout en respectant les restrictions et les descriptions convenues lors de la phase précédente.
+
+\subsection{Structure de l'application}
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=13cm]{Images/chapter3/software_architecture.png}
+		\caption{{\footnotesize La structure des fichiers sources}}
+\end{figure}
+
+\newpage
+
+\subsubsection{Architecture de gestion des états}
+Dans le but de créer une application facile à gérer, nous avons choisi l’architecture Scoped Model qui est basé sur un package tiers qui n'est pas inclus dans le framework Flutter. Voici comment les développeurs de Scoped Model le décrivent:
+
+\begin{quote}
+Un ensemble d’utilitaires vous permettant de facilement passer un modèle de données d’un Widget parent à ses descendants. En outre, il reconstruit également tous les enfants qui utilisent le modèle lors de la mise à jour du modèle. Cette bibliothèque a été extraite de la base de code Fuchsia
+\end{quote}
+
+Avec scoped\_model, il est beaucoup plus facile de travailler avec l’état dans votre application.
+Même si l'utilisation exclusive de StatefulWidget est une excellente chose, la plupart du temps, votre application aura plusieurs widgets qui doivent utiliser le même état partagé. Le problème, c’est que lorsque ces widgets existent à différents endroits de notre application, la transmission de l’état devient assez fastidieuse.
+
+En d'autres termes, scoped\_model permet à différents widgets d'accéder facilement au même état partagé.
+
+Il y a aussi quelques avantages supplémentaires intéressants que vous obtenez:
+
+\begin{list}{•}{}
+\item Cela nous permet de consolider facilement les variables d'état et la logique métier de l'ensemble de l'application.
+\item Nous pouvons éviter de lire sur des modèles d'architecture trop complexes.
+\item Un code passe-partout minimal est requis par rapport à des bibliothèques similaires.
+\end{list}
+
+\newpage
+
+\subsection{Les outils utilisé}
+
+\subsubsection{Android Studio}
+
+\begin{wrapfigure}[11]{r}{3cm}
+	\vspace{-10pt}
+	\includegraphics[width=3cm]{Images/chapter3/android_studio_icon.png}
+	\vspace{-10pt}
+	\caption{{\footnotesize Logo de Android Studio}}
+\end{wrapfigure}
+
+Android Studio est l'environnement officiel de développement intégré (\acrshort{IDE}) du système d'exploitation Android de Google, construit sur le logiciel IntelliJ IDEA de JetBrains et spécialement conçu pour le développement Android. Il est disponible au téléchargement sur les systèmes d'exploitation Windows, macOS et Linux. Il remplace les outils de développement Eclipse Android (ADT) comme IDE principal pour le développement d'applications Android natives.
+
+Android Studio a été annoncé le 16 mai 2013 lors de la conférence Google I / O. C'était au début de la phase de prévisualisation de l'accès à partir de la version 0.1 en mai 2013, puis en phase bêta à partir de la version 0.8 publiée en juin 2014. La première version stable a été publiée en décembre 2014 à partir de la version 1.0.
+
+Depuis le 7 mai 2019, Kotlin est la langue préférée de Google pour le développement d'applications Android. Néanmoins, d’autres langues sont prises en charge, notamment par Android Studio \cite{noauthor_android_nodate}.
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=14cm]{Images/chapter3/android_studio_interface.png}
+		\caption{{\footnotesize l'interface de Android Studio}}
+\end{figure}
+
+\newpage
+
+\subsubsection{Git}
+
+\begin{wrapfigure}[7]{r}{3cm}
+	\includegraphics[width=3cm]{Images/chapter3/git_logo.png}
+	\vspace{-10pt}
+	\caption{{\footnotesize Logo de git}}
+\end{wrapfigure}
+
+Git est un système de contrôle de version distribué permettant de suivre les modifications du code source au cours du développement du logiciel. 
+Il est conçu pour coordonner le travail des programmeurs, mais il peut être utilisé pour suivre les modifications dans n’importe quel ensemble de fichiers. Ses objectifs incluent la rapidité, l'intégrité des données et la prise en charge des flux de travail distribués non linéaires.
+
+Git a été créé par Linus Torvalds en 2005 pour développer le noyau Linux. D'autres développeurs du noyau ont contribué à son développement initial. Son responsable actuel depuis 2005 est Junio Hamano.
+
+Comme avec la plupart des systèmes de contrôle de version distribués, et contrairement à la plupart des systèmes client-serveur, chaque répertoire Git sur chaque ordinateur est un référentiel complet doté d'un historique complet et de capacités de suivi de version complètes, indépendant de l'accès réseau ou d'un serveur central.
+
+Git est un logiciel gratuit et à code source ouvert distribué sous les termes de la licence publique générale GNU version 2 \cite{noauthor_git_nodate}

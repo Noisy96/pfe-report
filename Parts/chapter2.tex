@@ -44,7 +44,7 @@ Les infrastructures Web réactives telles que ReactJS (et d'autres) sont devenue
 \begin{wrapfigure}[8]{r}{2cm}
 	\includegraphics[width=2cm]{Images/chapter2/react_native_logo.png}
 	\vspace{-20pt}
-	\caption{{\footnotesize Logo de React Native}}
+	\caption{{\footnotesize Logo de l'application}}
 \end{wrapfigure}
 
 React Native est très populaire (et mérite de l'être), mais comme le domaine JavaScript accède aux widgets de la plate-forme dans le domaine natif, il doit également passer par le pont. Les widgets sont généralement utilisés assez fréquemment (jusqu'à 60 fois par seconde lors d'animations, de transitions ou lorsque l'utilisateur balaie quelque chose sur l'écran avec son doigt), ce qui peut entraîner des problèmes de performances.
@@ -54,6 +54,7 @@ React Native est très populaire (et mérite de l'être), mais comme le domaine 
 \subsection{Qu'est-ce que Flutter?}
 
 \begin{wrapfigure}[8]{r}{2cm}
+	\vspace{-15pt}
 	\includegraphics[width=2cm]{Images/chapter2/flutter_logo.png}
 	\vspace{-20pt}
 	\caption{{\footnotesize Logo de Flutter}}
@@ -179,7 +180,7 @@ Flutter offre une augmentation de la productivité que provient du «rechargemen
 Il n’est pas nécessaire d’exécuter une autre version de Gradle. Vous voyez vos modifications dès que vous enregistrez. Pour les développeurs, cela est souvent très facile à maîtriser - il n’ya que peu ou pas de courbe d’apprentissage liée à l’utilisation du «rechargement à chaud» car, par défaut, cela se produit chaque fois que vous enregistrez. Cependant, les avantages sont essentiels. Le temps de développement est souvent réduit de 30\% à 40\%, car les délais de reconstruction de Gradle qui ralentissent le développement des développeurs Android prennent généralement plus de temps à chaque modification appliquée.
 
 \subsubsection{3. Intégration directe avec Firebase}
-Firebase fournit un support prêt à l'emploi pour un ensemble de services tels que le stockage en nuage, les fonctions de nuage, les bases de données en temps réel, l'hébergement, l'authentification et bien plus encore. Votre infrastructure est instantanément sans serveur, redondante et évolutive. Cela signifie que vous n’avez pas à passer beaucoup de temps et de ressources à construire le backend. Il est également simple de le combiner avec un outil permettant d’automatiser votre processus de développement et de publication, tel que Fastlane; faciliter la livraison continue. Par conséquent, vous n'avez pas besoin de support DevOps dédié dans votre équipe.
+Firebase fournit un support prêt à l'emploi pour un ensemble de services tels que le stockage en nuage, les fonctions de nuage, les bases de données en temps réel, l'hébergement, l'authentification et bien plus encore. Votre infrastructure est instantanément sans serveur (\gls{serverless}), redondante et évolutive. Cela signifie que vous n’avez pas à passer beaucoup de temps et de ressources à construire le backend. Il est également simple de le combiner avec un outil permettant d’automatiser votre processus de développement et de publication, tel que Fastlane; faciliter la livraison continue. Par conséquent, vous n'avez pas besoin de support DevOps dédié dans votre équipe.
 
 \subsubsection{4. Performance}
 L'application est compilée à l'avance en code ARM natif, pas au moment de l'exécution, comme dans React Native. Cela donne de meilleures performances car il n’ya pas de pont JS au milieu pour analyser et exécuter le code.
@@ -332,6 +333,7 @@ les services de Firebase peuvent être divisé en trois groupes:\bigskip\\
 Bien que la grande majorité de la communauté des développeurs soit d’accord sur le fait que Firebase est le meilleur BaaS (Backend as a Service) disponible à ce jour, il est toujours vrai qu’il existe d’autres solutions. C’est en plus de la solution traditionnelle de construction et de gestion de votre propore infrastructure backend.
 
 \begin{wrapfigure}[4]{r}{3cm}
+	\vspace{-10pt}
 	\includegraphics[width=3cm]{Images/chapter2/parse_logo.png}
 	\vspace{-20pt}
 	\caption{{\footnotesize Logo de Parse}}
@@ -360,7 +362,7 @@ Les meilleures applications du marché font confiance aux produits Google. Les p
 Flutter a été créé dans le but de le faire fonctionner sans problème pour Firebase. L'ensemble du processus d'intégration peut prendre jusqu'à 10 minutes, sans qu'il soit nécessaire de fournir beaucoup de données et le processus est totalement simple.\cite{noauthor_using_nodate}
 
 \subsubsection{4. Tarification flexible}
-Firebase offre aux développeurs un modèle de tarification \gls{freemium} flexible et, dans une certaine mesure, généreux, adoptant l’approche consistant à payer à l’échelle de votre application, en commençant par une offre gratuite dans laquelle vous obtenez une quantité limitée de données à stocker et des requêtes de lecture limitées effectuées par pour les applications en croissance, les développeurs peuvent payer un prix fixe pour une utilisation étendue des services de la plate-forme, ainsi que davantage de stockage de données et de requêtes, pour enfin atteindre l'offre illimitée dans laquelle vous êtes facturé pour ce que vous avez utilisé.\cite{noauthor_firebase_nodate}\bigskip
+Firebase offre aux développeurs un modèle de tarification \gls{freemium} flexible et, dans une certaine mesure, généreux, adoptant l’approche consistant à payer à l’échelle de votre application, en commençant par une offre gratuite dans laquelle vous obtenez une quantité limitée de données à stocker et des requêtes de lecture/écriture/suppression limitées a effectuées par jour pour les applications en croissance, les développeurs peuvent payer un prix fixe pour une utilisation étendue des services de la plate-forme, ainsi que davantage de stockage de données et de requêtes, pour enfin atteindre l'offre illimitée dans laquelle vous êtes facturé pour ce que vous avez utilisé.\cite{noauthor_firebase_nodate}\bigskip
 
 \begin{figure}[h]
 	\begin{center}
@@ -398,7 +400,7 @@ Avec le kit de développement (SDK) de cartes pour Android, vous pouvez ajouter 
 \end{list}
 
 \subsection{Google Books}
-Google Books (anciennement Google Books Search et Google Print et son nom de code Project Ocean) est un service de Google Inc. qui effectue une recherche dans le texte intégral des livres et des magazines scannés par Google et convertis en texte à l'aide de la reconnaissance optique de caractères. (OCR), et stocké dans sa base de données numérique. Les livres sont fournis par les éditeurs et les auteurs, via le programme Partenaires Google Books, ou par les partenaires bibliothèques de Google, via le projet Library. De plus, Google s'est associé à plusieurs éditeurs de magazines pour numériser leurs archives.\cite{noauthor_google_nodate}
+Google Books (anciennement Google Books Search et Google Print et son nom de code Project Ocean) est un service de Google Inc. qui effectue une recherche dans le texte intégral des livres et des magazines scannés par Google et convertis en texte à l'aide de la reconnaissance optique de caractères. (OCR), et stockés dans sa base de données numérique. Les livres sont fournis par les éditeurs et les auteurs, via le programme Partenaires Google Books, ou par les partenaires bibliothèques de Google, via le projet Library. De plus, Google s'est associé à plusieurs éditeurs de magazines pour numériser leurs archives.\cite{noauthor_google_nodate}
 
 La nouvelle API v1 de Google Books vous permet d'accéder par programme à de nombreuses opérations disponibles sur le site Web de Google Books. Vous pouvez l'utiliser pour créer des applications puissantes offrant une intégration plus poussée avec Google Books. Les principales fonctionnalités de l'API sont les suivantes:
 
