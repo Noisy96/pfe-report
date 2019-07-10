@@ -13,6 +13,13 @@
 
 \PrerenderUnicode{é} % This is for fixing the issue or having index/header 'é' error
 
+\hypersetup{
+pdftitle={Conception et réalisation d'une plateforme d'échange de livre basée sur une application Android/iOS},
+pdfsubject={Projet de Fin d’Etudes},
+pdfauthor={Rahmouni Abdelhak},
+pdfkeywords={Flutter, Android, iOS, Books}
+}
+
 %		Header		%		
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -28,6 +35,9 @@
 
 \begin{document}
 
+\input{Parts/remerciements.tex}
+\input{Parts/resume.tex}
+
 \tableofcontents
 \listoffigures
 %\listoftables --- until now I haven't used any tables
@@ -42,4 +52,7 @@
 
 \bibliographystyle{plain}
 \bibliography{bibli}
+
+\input{Parts/resume.tex}
+
 \end{document}
